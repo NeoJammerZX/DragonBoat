@@ -399,7 +399,7 @@ try:
     sc1, sc2, sc3 = st.sidebar.columns([1, 2, 1])
     with sc2:
         st.image(
-            r"C:\Users\Rafael.Cortado\NeoCodes\DragonBoatSeating.webp",
+            r"https://github.com/NeoJammerZX/DragonBoat/blob/main/DragonBoatSeating.webp",
             #caption="Dragon Boat seating helper - input crew and assign seats",
             width=150,
             use_container_width=False,
@@ -643,12 +643,12 @@ if st.session_state.page == "Dragonboat Seating Calculator":
             # Display diagram in the center
             with img_col:
                 try:
-                        svg = generate_seating_svg(left_rows, right_rows, r"C:/Users/Rafael.Cortado/NeoCodes/DragonBoatSeating.webp")
+                        svg = generate_seating_svg(left_rows, right_rows, r"https://github.com/NeoJammerZX/DragonBoat/blob/main/DragonBoatSeating.webp")
                         if svg:
                             st.markdown(svg, unsafe_allow_html=True)
                         else:
                             # fallback to plain image if SVG generation failed
-                            st.image(r"C:/Users/Rafael.Cortado/NeoCodes/DragonBoatSeating.webp", use_column_width=True)
+                            st.image(r"https://github.com/NeoJammerZX/DragonBoat/blob/main/DragonBoatSeating.webp", use_column_width=True)
                 except Exception:
                         st.info("Seating diagram or overlay could not be rendered.")
 
@@ -758,4 +758,5 @@ if st.session_state.page == "Dragonboat Seating Calculator":
 
     st.markdown("\n\n")
         # End of DragonBoat Seating app
+
 
