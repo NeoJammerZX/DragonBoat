@@ -359,7 +359,7 @@ st.markdown(
 
 # Display custom sidebar logo with text (FF7-themed)
 try:
-    with open(r"https://github.com/NeoJammerZX/DragonBoat/blob/main/FBALogo2.png", 'rb') as f:
+    with open(r"https://raw.githubusercontent.com/NeoJammerZX/DragonBoat/a398bed4e322a762c7f3383a818458fc94365e4c/FBALogo2.png", 'rb') as f:
         logo_b64 = base64.b64encode(f.read()).decode('ascii')
     logo_data_uri = f"data:image/png;base64,{logo_b64}"
     st.sidebar.markdown(
@@ -384,7 +384,7 @@ try:
     # Place the image in the middle column so it appears centered at the top
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        st.image(r"https://github.com/NeoJammerZX/DragonBoat/blob/main/FBALogo2.png", width=300, use_container_width=False)
+        st.image(r"https://raw.githubusercontent.com/NeoJammerZX/DragonBoat/a398bed4e322a762c7f3383a818458fc94365e4c/FBALogo2.png", width=300, use_container_width=False)
         st.markdown("[Firebase Alpha Dragonboat Facebook Page](https://www.facebook.com/firebasealphadragonboat)")
 except Exception:
     # Fallback: centered markdown link
@@ -399,7 +399,7 @@ try:
     sc1, sc2, sc3 = st.sidebar.columns([1, 2, 1])
     with sc2:
         st.image(
-            r"https://github.com/NeoJammerZX/DragonBoat/blob/main/DragonBoatSeating.webp",
+            r"https://raw.githubusercontent.com/NeoJammerZX/DragonBoat/a398bed4e322a762c7f3383a818458fc94365e4c/DragonBoatSeating.webp",
             #caption="Dragon Boat seating helper - input crew and assign seats",
             width=150,
             use_container_width=False,
@@ -643,12 +643,12 @@ if st.session_state.page == "Dragonboat Seating Calculator":
             # Display diagram in the center
             with img_col:
                 try:
-                        svg = generate_seating_svg(left_rows, right_rows, r"https://github.com/NeoJammerZX/DragonBoat/blob/main/DragonBoatSeating.webp")
+                        svg = generate_seating_svg(left_rows, right_rows, r"https://raw.githubusercontent.com/NeoJammerZX/DragonBoat/a398bed4e322a762c7f3383a818458fc94365e4c/DragonBoatSeating.webp")
                         if svg:
                             st.markdown(svg, unsafe_allow_html=True)
                         else:
                             # fallback to plain image if SVG generation failed
-                            st.image(r"https://github.com/NeoJammerZX/DragonBoat/blob/main/DragonBoatSeating.webp", use_column_width=True)
+                            st.image(r"https://raw.githubusercontent.com/NeoJammerZX/DragonBoat/a398bed4e322a762c7f3383a818458fc94365e4c/DragonBoatSeating.webp", use_column_width=True)
                 except Exception:
                         st.info("Seating diagram or overlay could not be rendered.")
 
@@ -758,5 +758,6 @@ if st.session_state.page == "Dragonboat Seating Calculator":
 
     st.markdown("\n\n")
         # End of DragonBoat Seating app
+
 
 
